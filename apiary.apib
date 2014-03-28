@@ -47,11 +47,11 @@ A single Issuedinvoice object
 ### Remove a IssuedInvoice [DELETE]
 + Response 204
 
-## DocumentAddress [/issuedinvoice/{id}/mydocumentaddress]
+## MyDocumentAddress [/issuedinvoice/{id}/mydocumentaddress]
 Vrati fakturacni udaje odberatele pro fakturu.
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + id (required, number, `1`) ... Numeric `id` of the IssuedInvoice releated to DocumentAddress
 
 ### Retrieve a Note [GET]
 + Response 200 (application/json)
@@ -64,7 +64,27 @@ Vrati fakturacni udaje odberatele pro fakturu.
 
             { "id": 2, "title": "Pick-up posters from post-office" }
 
-### Remove a pricelistitems [DELETE]
+### Remove a pricelistitems [PUT]
++ Response 204
+
+## PurchaserDocumentAddress [/issuedinvoice/{id}/purchaserdocumentaddress]
+Vrati fakturacni udaje odberatele pro fakturu.
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the IssuedInvoice releated to DocumentAddress
+
+### Retrieve a Note [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }
+
+### Remove a pricelistitems [PUT]
 + Response 204
 
 
