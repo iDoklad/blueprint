@@ -211,4 +211,32 @@ Price items related resources of the **Notes API**
 + Response 201 (application/json)
 
         { "id": 3, "title": "Buy cheese and bread for breakfast." }
+        
+## PriceListItem [/pricelistitems/{id}]
+### Get a price list item [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]
+
+### Update a PriceList [PUT]
++ Request (application/json)
+
+        { "title": "Buy cheese and bread for breakfast." }
+
++ Response 201 (application/json)
+
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }  
+        
+### Delete a PriceList [DELETE]
++ Request (application/json)
+
+        { "title": "Buy cheese and bread for breakfast." }
+
++ Response 201 (application/json)
+
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }         
 
