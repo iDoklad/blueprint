@@ -17,7 +17,7 @@ Jednoduchý příklad jak získat seznam faktur a vytvořit fakturu
 # Group Autentifikace
 Informace, které se tykaji přihlašování
 
-# Group Paging
+# Group Strankování
 Informace, které se tykaji strankování api
 
 # Group Agenda
@@ -149,18 +149,14 @@ Vrati fakturacni udaje odberatele pro fakturu.
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the IssuedInvoice releated to DocumentAddress
 
-### Retrieve a Note [GET]
+### Retrieve a Document Address [GET]
 + Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: The Value
 
     + Body
 
             { "id": 2, "title": "Pick-up posters from post-office" }
 
-### Remove a pricelistitems [PUT]
+### Edit DocumentAddress [PUT]
 + Response 204
 
 ## PurchaserDocumentAddress [/issuedinvoice/{id}/purchaserdocumentaddress]
@@ -169,19 +165,39 @@ Vrati fakturacni udaje odberatele pro fakturu.
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the IssuedInvoice releated to DocumentAddress
 
-### Retrieve a Note [GET]
+### Retrieve a DocumentAddress [GET]
 + Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: The Value
 
     + Body
 
             { "id": 2, "title": "Pick-up posters from post-office" }
 
-### Remove a pricelistitems [PUT]
+### Edit a Document Address [PUT]
 + Response 204
+
+
+# Group IssuedInvoice Actions
+Actions for Issued invoice **iDoklad API**
+
+## Print [/issuedinvoice/{id}/actions/Print]
+Vrati Pdf pro fakturu
+
+### Retrieve a DocumentAddress [GET]
++ Response 200 (application/json)
+
+    + Body
+    
+            { "invoice": "64baseEncodedAndZipCompressedString" }
+            
+## PrintUncompressed [/issuedinvoice/{id}/actions/PrintUncompressed]
+Vrati Pdf pro fakturu
+
+### Retrieve a DocumentAddress [GET]
++ Response 200 (application/json)
+
+    + Body
+    
+            { "invoice": "64baseEncodedString" }            
 
 # Group Contacts
 Contacts related resources of the **iDoklad API**
