@@ -19,6 +19,57 @@ Informace, které se tykaji přihlašování
 # Group Paging
 Informace, které se tykaji strankování api
 
+# Group Agenda
+Agenda related resources of the **iDoklad API**
+
+## Agendas Collection [/agendas]
+### List of all Agendas [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+          
+## Agenda [/agendas/{id}]
+### Get an Agenda [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]       
+        
+### Update an Agenda [PUT]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]        
+        
+        
+## Contact for Agenda [/agendas/{agendaid}/contact]
+### Get Contact information for Agenda [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+         ]
+         
+### Updage Contact for Agenda [PUT]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]   
+
 # Group IssuedInvoices
 IssuedInvoices related resources of the **iDoklad API**
 
@@ -240,54 +291,3 @@ Price items related resources of the **iDoklad API**
         { "title": "Buy cheese and bread for breakfast." }
 
 + Response 200
-
-# Group Agenda
-Agenda related resources of the **iDoklad API**
-
-## Agendas Collection [/agendas]
-### List of all Agendas [GET]
-+ Response 200 (application/json)
-
-        [{
-          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
-          
-## Agenda [/agendas/{id}]
-### Get an Agenda [GET]
-+ Response 200 (application/json)
-
-        [{
-          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
-        }]       
-        
-### Update an Agenda [PUT]
-+ Response 200 (application/json)
-
-        [{
-          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
-        }]        
-        
-        
-## Contact for Agenda [/agendas/{agendaid}/contact]
-### Get Contact information for Agenda [GET]
-+ Response 200 (application/json)
-
-        [{
-          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
-         ]
-         
-### Updage Contact for Agenda [PUT]
-+ Response 200 (application/json)
-
-        [{
-          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
-        }]       
