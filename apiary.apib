@@ -191,7 +191,7 @@ Contacts related resources of the **iDoklad API**
 
 
 # Group PriceListItems
-Price items related resources of the **Notes API**
+Price items related resources of the **iDoklad API**
 
 ## PriceListItems Collection [/pricelistitems]
 ### List all Price list items [GET]
@@ -238,3 +238,33 @@ Price items related resources of the **Notes API**
 
 + Response 200
 
+# Group Agenda
+Agenda related resources of the **iDoklad API**
+
+## Agendas Collection [/agendas]
+### List of all Agendas [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+          
+## Agenda [/agendas/{id}]
+### Get an Agenda [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]       
+        
+### Update an Agenda [PUT]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]           
