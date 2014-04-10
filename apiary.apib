@@ -54,9 +54,38 @@ A single Issuedinvoice object
     + Body
 
             { "id": 2, "title": "Pick-up posters from post-office" }
+            
 
 ### Remove a IssuedInvoice [DELETE]
-+ Response 204
++ Response 204            
+            
+## IssuedInvoiceWrite [/issuedinvoiceswrite/{id}]
+A single IssuedinvoiceWrite object
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+
+### Update a IssuedInvoice [PUT]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }   
+            
+### Add a IssuedInvoice [POST]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }             
 
 ## MyDocumentAddress [/issuedinvoice/{id}/mydocumentaddress]
 Vrati fakturacni udaje odberatele pro fakturu.
@@ -135,7 +164,7 @@ Price items related resources of the **Notes API**
           "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
         }]
 
-### Create a Note [POST]
+### Create a PriceList [POST]
 + Request (application/json)
 
         { "title": "Buy cheese and bread for breakfast." }
