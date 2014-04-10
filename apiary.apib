@@ -12,9 +12,12 @@ iDoklad API je nástroj pro online fakturaci
 
 Jednoduchý příklad jak získat seznam faktur a vytvořit fakturu
 
-# Group Authentifikace
+# Group Autentifikace
 
 Informace, které se tykaji přihlašování
+
+# Group Paging
+Informace, které se tykaji strankování api
 
 # Group IssuedInvoices
 IssuedInvoices related resources of the **iDoklad API**
@@ -267,4 +270,24 @@ Agenda related resources of the **iDoklad API**
           "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
         }, {
           "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
-        }]           
+        }]        
+        
+        
+## Contact for Agenda [/agendas/{agendaid}/contact]
+### Get Contact information for Agenda [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+         ]
+         
+### Updage Contact for Agenda [PUT]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]       
