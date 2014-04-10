@@ -148,6 +148,45 @@ Contacts related resources of the **iDoklad API**
 + Response 201 (application/json)
 
         { "id": 3, "title": "Buy cheese and bread for breakfast." }
+        
+## Contact [/contacts/{id}]
+### Get a Contact [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]
+
+### Update a Contact [PUT]
++ Request (application/json)
+
+        { "title": "Buy cheese and bread for breakfast." }
+
++ Response 201 (application/json)
+
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }     
+        
+## BankAccounts for Contacts [/contacts/{id}/bankaccounts]
+### Get Bank Account for Contact [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]
+
+### Add a Bank Account for Contact [POST]
++ Request (application/json)
+
+        { "title": "Buy cheese and bread for breakfast." }
+
++ Response 201 (application/json)
+
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }        
+        
 
 
 
