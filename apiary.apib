@@ -5,15 +5,16 @@ HOST: app.idoklad.cz/api/
 iDoklad API je nástroj pro online fakturaci
 
 # Group Úvod
-
 Úvod do API iDokladu, základní informace
 
 # Group Quick Start
-
 Jednoduchý příklad jak získat seznam faktur a vytvořit fakturu
 
-# Group Autentifikace
+* přihlašeni
+* přistup k datum jednotlive agendy
+* rychle vytvoreni faktury
 
+# Group Autentifikace
 Informace, které se tykaji přihlašování
 
 # Group Paging
@@ -32,6 +33,7 @@ Agenda related resources of the **iDoklad API**
           "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
           
 ## Agenda [/agendas/{id}]
+
 ### Get an Agenda [GET]
 + Response 200 (application/json)
 
@@ -239,9 +241,17 @@ Contacts related resources of the **iDoklad API**
 
 + Response 201 (application/json)
 
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }        
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }  
         
+## IssuedInvoices for Contacts [/contacts/{id}/issuedinvoices]
+### Get Issuedinvoices list for Contact [GET]
++ Response 200 (application/json)
 
+        [{
+          "id": 1, "title": "Jogging in park", "invoice" : {"id":51}
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office", "invoice" : {"id":51}
+        }]
 
 
 # Group PriceListItems
